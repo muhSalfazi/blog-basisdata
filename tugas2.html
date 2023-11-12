@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--boostrap-->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous"
+  />
+    
+    <link rel="stylesheet" href="./css/tugas.css" />
+    <link rel="icon" type="image/png" href="./src/icon/salmanfauzi.jpg" />
+    <title>salmanfauzi-if22c</title>
+    
+  </head>
+  <body>
+    <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+          <a class="navbar-brand text-light" href="#">
+            <img
+              src="./src/icon/salmaubp-removebg-preview.png"
+              alt="Logo"
+              width="100px"
+              height="auto"
+              style="box-shadow: 6px 0px 5px rgba(0, 0, 0, 0.3)"
+            />
+            <span style="
+            margin-left: 4%;text-transform: uppercase; font-size: 30px; font-weight: bold; color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);font-family: 'Agbalumo', serif;">Salman Fauzi</span>
+          </a>
+          
+        </div>
+      </nav>
+    </nav>
+
+    <!--primary key-->
+    <div class="container">
+      <h1 class="text-primary">
+        Memahami Primary Key, Foreign Key, dan Candidate Key dalam Basis Data
+      </h1>
+      <hr>
+      <p class="date">oktober 10, 2023</p>
+      <p>
+        Menurut (Florescu D dan Fourny G, 2013) Relational Database dikembangkan
+        Edgar Codd dari IBM pada tahun 1969. Penggunaan Relational Database
+        sebagai basis data model saat ini telah mendominasi model lain seperti
+        hierarchical, network ataupun object-model. Relational Database dapat
+        diartikan sebagai sebuah basis data yang merepresentasikan data sebagai
+        suatu kumpulan tabel dimana hubungan antar tabel juga direpresentasikan
+        menurut value yang ada pada tabel-tabel tersebut. Struktur basis data
+        yang baik tersusun atas relasi antar entitas yang ada dalam suatu data
+        yang terorganisasi sehingga informasi yang tersimpan dapat diakses.
+        Relasi database menyimpan datanya di dalam tabel yang terdiri atas baris
+        dan kolom. Suatu baris dalam tabel dapat juga disebut sebagai record
+        atau tuple, sementara kolom disebut field atau atribut.
+      </p>
+      <p>
+        Terdapat tiga jenis atribut yang digunakan pada database model
+        relasional yaitu atribut Primary Key (PK), Foreign Key (FK), dan atribut
+        bukan PK maupun FK. Primary Key adalah atribut atau kombinasi beberapa
+        atribut yang memiliki nilai yang unik sehingga digunakan sebagai
+        identifier dari baris di dalam sebuah tabel. Pada aturan model basis
+        data relasional, Primary Key (PK) tidak boleh bernilai nol (null).
+      </p>
+      <h5 class="fw-bold">Apa itu Primary key ?</h5>
+      <p>
+        Primary key (kunci utama) adalah sebuah candidate key yang telah dipilih
+        untuk mengidentifikasi setiap record secara unik. Primary key harus
+        merupakan field yang benar-benar unik dan tidak boleh ada nilai NULL.
+        Pengertian lainya primary key adalah suatu nilai dalam basis data yang
+        digunakan untuk mengidentifikasi suatu baris dalam tabel.
+      </p>
+      <p>Berikut adalah Contoh Primary key :</p>
+      <p><img src="./src/img/primarykey/gambar1.webp" alt="" class="img-fluid mx-auto d-block" /></p>
+      <br />
+      <h5 class="fw-bold">Fungsi Primary Key</h5>
+      <p>
+        Dalam database relasional, tabel berfungsi untuk menyimpan nilai di
+        dalamnya. Tabel ini terdiri dari kombinasi kolom yang terdapat kunci
+        primer untuk menentukan tingkat integritas tabel. Pemilihan primary key
+        adalah langkah penting untuk mencapai tujuan database yang benar dan
+        valid
+      </p>
+      <h5 class="fw-bold" >Syarat Primary Key</h5>
+      <ul>
+        <li>tabel hanya bisa memiliki satu kunci primer</li>
+        <li>
+          Jumlah maksimal kunci primer yaitu 16 kolom dengan panjang kunci 900
+          byte.
+        </li>
+        <li>
+          Kolom kunci utama perlu Anda definisikan “NOT NULL” yang artinya
+          memastikan bahwa nilai dalam kolom tersebut tidak boleh kosong. Jika
+          Anda tidak memasukkan nilai atau data dalam kolom tersebut, maka akan
+          terjadi kesalahan pada database.
+        </li>
+        <li>
+          Tidak boleh berisi nilai yang sama antara baris satu dengan baris
+          lain.
+        </li>
+        <li>
+          Tipe data yang Anda gunakan untuk kunci primer tidak boleh tipe BLOB,
+          melainkan INT, BIGINT, TINYINT, SMALLINT, dan sejenisnya.
+        </li>
+      </ul>
+      <p>
+        Kolom kunci primer pada SQL biasanya memiliki atribut bernama
+        AUTO_INCREMENT yang akan menghasilkan urutan naik dari kunci tersebut
+        secara otomatis. Dengan kata lain, kunci utama baris berikutnya akan
+        lebih besar nilainya dari baris sebelumnya.
+      </p>
+      <h5 class="fw-bold">Kelebihan dan kekurangan primarykey</h5>
+      <p>diantaran kelebihan dari primary key adalah:</p>
+      <ul>
+        <li>
+          Primary key bisa menghindari kemungkinan terjadinya duplikasi data
+          atau kesamaan antara data satu dengan lainnya.
+        </li>
+        <li>
+          Primary key bisa membantu untuk melakukan pencarian data secara lebih
+          cepat dan efisien.
+        </li>
+        <li>
+          Primary key mencegah dari kesalahan memasukkan data kosong atau lupa
+          memasukkan data, sebab primary key tidak boleh bernilai null.
+        </li>
+      </ul>
+      <p>
+        Adapun kekurangan dari primary key adalah bahwa tidak setiap data bisa
+        digunakan sebagai primary key. Hal ini dikarenakan primary key memiliki
+        sejumlah syarat atau ketentuan yang harus dipenuhi agar tidak terjadi
+        eror pada database
+      </p>
+      <h5 class="fw-bold">5 contoh penerepan Primary Key pada ERD:</h5>
+      <ol>
+        <li>Tabel Mahasiswa</li>
+        <ul>
+          <li>Entitas : Mahasiswa</li>
+          <li>primarykey : NIM(nomor induk mahasiswa)</li>
+        </ul>
+        <li>Tabel Karyawan</li>
+        <ul>
+          <li>Entitas: Karyawan</li>
+          <li>primarykey : ID_karyawan</li>
+        </ul>
+        <li>Tabel Produk</li>
+        <ul>
+          <li>entitas : Produk</li>
+          <li>primarykey : key_Produk</li>
+        </ul>
+        <li>Tabel Pesanan</li>
+        <ul>
+          <li>Entitas : Pesanan</li>
+          <li>primarykey:ID_Pesanan</li>
+        </ul>
+        <li>Tabel Pelanggan</li>
+        <ul>
+          <li>Entitas : Pelanggan</li>
+          <li>primarykey : ID_Pelanggan</li>
+        </ul>
+      </ol>
+    </div>
+<!--link yt tutorial-->
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item mx-auto d-block" src="https://www.youtube.com/embed/d2hK6mUJ58c" allowfullscreen></iframe>
+    </div>
+  <!--footer-->
+    <footer class="bg-light text-center py-3">
+      <hr />
+      <a class="logoubp" href="https://ubpkarawang.ac.id/" target="_blank">
+        <img
+          src="./src/icon/logo_ubp-removebg-preview.png"
+          alt="UBP Logo"
+          width="30"
+          height="30"
+        />
+        Universitas Buana Perjuangan Karawang
+      </a>
+      <p>Disusun untuk memenuhi tugas basis data:</p>
+      <a href="https://business.google.com/website/adirpid" target="_blank"
+        >Bpk. Adi Pratama, Mkom</a
+      >
+      <!--page-->
+      <nav aria-label="...">
+        <ul class="pagination pagination-md">
+          <li class="page-item">
+            <a class="page-link" href="./index.html">1</a>
+          </li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="./tugas2.html">2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="./tugas3.html">3</a></li>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="./tugas4.html">4</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="./tugas5.html">5</a>
+        </li>
+      
+        </ul> 
+      </nav>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!--cdn-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

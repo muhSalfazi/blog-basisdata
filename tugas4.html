@@ -1,0 +1,211 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--bosstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!---->
+    <link rel="stylesheet" href="./css/tugas.css" />
+    <link rel="icon" type="image/png" href="./src/icon/salmanfauzi.jpg" />
+    <title>salmanfauzi-if22c</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <a class="navbar-brand text-light" href="#">
+          <img
+            src="./src/icon/salmaubp-removebg-preview.png"
+            alt="Logo"
+            width="100px"
+            height="auto"
+            style="box-shadow: 6px 4px 5px rgba(0, 0, 0, 0.3)"
+          />
+          <span
+            style="
+              margin-left: 4%;
+              text-transform: uppercase;
+              font-size: 30px;
+              font-weight: bold;
+              color: white;
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+              font-family: 'Agbalumo', serif;
+            "
+            >Salman Fauzi</span
+          >
+        </a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <h1 class="text-primary">Apa Itu Normalisasi Pada ERD?</h1>
+        <hr />
+        <p class="date">November 06, 2023</p>
+      </header>
+      <!--materi 4-->
+      <main>
+        <p>
+          Normalisasi dalam konteks Entity-Relationship Diagram (ERD) adalah
+          proses desain database yang memiliki tujuan untuk mengorganisir dan
+          mengelola data dengan efisien. Dalam normalisasi, tabel-tabel dalam
+          database dibagi dan diatur sedemikian rupa sehingga data disimpan
+          dengan cara yang mengurangi redudansi, memastikan konsistensi, dan
+          menghindari anomali data. Normalisasi ERD mengikuti beberapa tingkat
+          normalisasi, seperti 1st Normal Form (1NF), 2nd Normal Form (2NF), 3rd
+          Normal Form (3NF), dan sebagainya.
+        </p>
+        <h5 class="fw-bold">Konsep Normalisasi Pada ERD</h5>
+        <p>
+          Berikut adalah penjelasan rinci tentang konsep normalisasi pada ERD:
+        </p>
+        <ol>
+          <li>1st Normal Form (1NF):</li>
+          <p>
+            Untuk mencapai 1NF, setiap entitas atau tabel dalam database harus
+            dibagi menjadi atribut atau kolom yang memiliki nilai atomik. Ini
+            berarti bahwa setiap nilai dalam kolom tidak dapat lagi dibagi
+            menjadi bagian yang lebih kecil. Misalnya, jika Anda memiliki kolom
+            "Alamat" yang berisi "Jalan X, Kota Y," maka Anda perlu memisahkan
+            "Alamat" menjadi dua kolom terpisah: "Jalan" dan "Kota."
+          </p>
+          <p>
+            <span class="fw-bold">Tujuan : </span> Menciptakan entitas atau
+            tabel yang memiliki atribut dengan nilai atomik, yang berarti setiap
+            nilai dalam kolom adalah tidak dapat dibagi lagi menjadi bagian yang
+            lebih kecil.
+          </p>
+          <img
+            class="img-fluid mx-auto d-block"
+            src="./src/img/normalisasi/gambar1.png"
+          />
+          <li>2nd Normal Form (2NF)</li>
+          <p>
+            2NF memerlukan bahwa semua atribut non-kunci (atribut yang tidak
+            termasuk dalam kunci utama) dalam tabel harus sepenuhnya bergantung
+            pada seluruh kunci utama, bukan hanya sebagian. Ini menghilangkan
+            redudansi data dan memastikan setiap atribut berada dalam tabel yang
+            sesuai.
+          </p>
+          <p>
+            <span class="fw-bold">Tujuan : </span>Menghilangkan redudansi data
+            dengan memastikan bahwa setiap atribut non-kunci dalam tabel
+            sepenuhnya bergantung pada seluruh kunci utama tabel.
+          </p>
+          <img
+            class="img-fluid mx-auto d-block"
+            src="./src/img/normalisasi/gambar2.png"
+            alt=""
+          />
+          <li>3rd Normal Form (3NF)</li>
+          <p>
+            3NF memerlukan bahwa atribut non-kunci tidak boleh transitif
+            bergantung pada kunci utama. Dengan kata lain, atribut non-kunci
+            tidak boleh bergantung pada atribut non-kunci lain dalam tabel.
+          </p>
+          <p>
+            <span class="fw-bold">Tujuan : </span>Menghindari ketergantungan
+            transitif di antara atribut non-kunci dalam tabel dengan memastikan
+            bahwa atribut non-kunci tidak bergantung pada atribut non-kunci lain
+            dalam tabel.
+          </p>
+          <img
+            class="img-fluid mx-auto d-block"
+            src="./src/img/normalisasi/gambar3.png"
+            alt=""
+          />
+          <li>BCNF (Boyce-Codd Normal Form)</li>
+          <p>
+            BCNF adalah tingkat normalisasi yang lebih ketat daripada 3NF dan
+            menuntut bahwa setiap ketergantungan fungsional non-trivial dalam
+            tabel harus bergantung pada kunci utama.
+          </p>
+          <p>
+            <span class="fw-bold">Tujuan : </span>Memastikan bahwa setiap
+            ketergantungan fungsional non-trivial dalam tabel bergantung pada
+            kunci utama tabel. BCNF adalah tingkat normalisasi yang lebih ketat
+            daripada 3NF.
+          </p>
+          <img
+            class="img-fluid mx-auto d-block"
+            src="./src/img/normalisasi/gambar4.png"
+            alt=""
+          />
+          <p>
+            Normalisasi ERD membantu memastikan integritas data, mengurangi
+            redudansi, dan mempermudah operasi database. Namun, perlu diingat
+            bahwa normalisasi dapat meningkatkan kompleksitas query dan
+            mengurangi performa dalam beberapa situasi, sehingga perlu
+            dipertimbangkan dengan bijak dalam desain database.
+          </p>
+        </ol>
+      </main>
+    </div>
+    <!-- Link YouTube Tutorial -->
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        class="embed-responsive-item mx-auto d-block"
+        src="https://www.youtube.com/embed/r7E9IF8wPm0"
+      ></iframe>
+    </div>
+
+    <footer class="bg-light text-center py-3">
+      <hr />
+      <a class="logoubp" href="https://ubpkarawang.ac.id/" target="_blank">
+        <img
+          src="./src/icon/logo_ubp-removebg-preview.png"
+          alt="UBP Logo"
+          width="30"
+          height="30"
+        />
+        Universitas Buana Perjuangan Karawang
+      </a>
+      <p>Disusun untuk memenuhi tugas basis data:</p>
+      <a href="https://business.google.com/website/adirpid" target="_blank"
+        >Bpk. Adi Pratama, Mkom</a
+      >
+      <!--page-->
+      <nav aria-label="...">
+        <ul class="pagination pagination-md">
+          <li class="page-item">
+            <a class="page-link" href="./index.html">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="./tugas2.html">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="./tugas3.html">3</a>
+          </li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="./tugas4.html">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="./tugas5.html">5</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!--cdn-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

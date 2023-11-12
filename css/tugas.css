@@ -1,0 +1,160 @@
+/* CSS untuk tampilan yang menarik dan keren */
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  transform-origin: top;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-expand-lg .navbar-toggler:not(.collapsed) + .navbar-collapse,
+.navbar-expand-lg .navbar-nav .dropdown-menu.show {
+  transform: translateY(0%);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.img-fluid {
+  width: 40%;
+  height: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #007bff;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.date {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.logoubp img {
+  max-width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*page*/
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination a,
+.pagination span {
+  font-size: 14px;
+  padding: 6px 12px;
+}
+
+.pagination-md a,
+.pagination-md span {
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+footer {
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 568px) {
+  body {
+    justify-content: center;
+    font-size: 14px; /* Mengurangi ukuran font agar sesuai dengan layar kecil */
+  }
+
+  .img-fluid {
+    width: 100%; /* Menyesuaikan lebar gambar agar sesuai dengan layar kecil */
+  }
+
+  h1 {
+    font-size: 20px; /* Mengurangi ukuran font judul */
+  }
+
+  .container {
+    padding: 10px; /* Mengurangi padding untuk ruang konten yang lebih sedikit */
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Mengubah arah flex menjadi kolom pada layar kecil */
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 0; /* Menghilangkan margin bottom pada item navbar */
+  }
+  .navbar-brand img {
+    width: 70px; /* Mengurangi ukuran logo untuk responsivitas */
+  }
+
+  .navbar-brand span {
+    font-size: 13px; /* Mengurangi ukuran font untuk responsivitas */
+  }
+  .navbar-brand {
+    font-size: 20px; /* Ukuran font navbar brand pada layar kecil */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 16px; /* Ukuran font navbar item pada layar kecil */
+  }
+
+  .navbar-nav {
+    margin-top: 10px; /* Memberikan sedikit margin pada item navbar */
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  h1 {
+    font-size: 24px; /* Ukuran font judul pada layar kecil */
+    margin-top: 10px; /* Memberikan sedikit margin atas pada judul */
+  }
+}

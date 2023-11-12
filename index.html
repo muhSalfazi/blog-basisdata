@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--bosstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!---->
+    <link rel="stylesheet" href="./css/tugas.css" />
+    <link rel="icon" type="image/png" href="./src/icon/salmanfauzi.jpg" />
+    <title>salmanfauzi-if22c</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <a class="navbar-brand text-light" href="#">
+          <img
+            src="./src/icon/salmaubp-removebg-preview.png"
+            alt="Logo"
+            width="100px"
+            height="auto"
+            style="box-shadow: 6px 4px 5px rgba(0, 0, 0, 0.3)"
+          />
+          <span
+            style="
+              margin-left: 4%;
+              text-transform: uppercase;
+              font-size: 30px;
+              font-weight: bold;
+              color: white;
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+              font-family: 'Agbalumo', serif;
+            "
+            >Salman Fauzi</span
+          >
+        </a>
+      </div>
+    </nav>
+
+    <!-- Tugas 1 -->
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <h1 class="text-primary">
+          Apa itu Atribut,entitas dan reelasi dalam ERD
+        </h1>
+        <hr />
+        <p class="date">September 27, 2023</p>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <p>
+          Entity Relationship Diagram (ERD) adalah salah satu alat yang
+          digunakan dalam desain database untuk menggambarkan hubungan antara
+          entitas atau objek dalam basis data. ERD membantu mengidentifikasi
+          entitas apa yang ada dalam sistem, bagaimana entitas tersebut terkait
+          satu sama lain, dan bagaimana atribut-atribut entitas tersebut saling
+          terkait. ERD membantu memvisualisasikan struktur basis data dan
+          memberikan pandangan yang jelas tentang bagaimana data disimpan,
+          diorganisasi, dan diakses dalam sebuah sistem informasi.
+        </p>
+        <p>
+          Ketika mendokumentasikan data atau proses menjadi database, Anda dapat
+          meningkatkan pemahaman atas sistem tersebut dengan melihatnya dari
+          berbagai perspektif.
+        </p>
+        <p>
+          Oleh karena itu, untuk membuat sistem database yang rapi dan
+          terstruktur, Anda memerlukan Entity Relationship Diagram (ERD).
+          Entity-relationship diagram (ERD) adalah model untuk menyusun database
+          agar dapat menggambarkan data yang memiliki relasi dengan database
+          yang akan didesain.
+        </p>
+        <h5 class="fw-bold">Istilah dan Komponen Penyusun ERD</h5>
+        <p>
+          Diagram ER biasanya berhubungan langsung dengan diagram data flow
+          untuk menampilkan konten data store. Ketiga hal tersebut dapat
+          membantu memvisualisasikan bagaimana data saling terhubung dan berguna
+          untuk mengonstruksi basis data relasional. Saat Anda ingin mulai
+          membuat ERD, ada beberapa istilah umum dan komponen ERD yang perlu
+          Anda pahami terlebih dahulu.
+        </p>
+        <p>
+          Hal yang harus Anda lakukan sebelum mengetahui cara membuat entity
+          relationship diagram adalah memahami beberapa komponen penyusunnya.
+          Simak komponen penyusun ERD berikut ini:
+        </p>
+        <ol>
+          <li>
+            <h6 class="fw-bold">Entitas</h6>
+          </li>
+          <p>
+            Kumpulan objek yang dapat diidentifikasikan secara unik atau
+            berbeda. Biasanya, simbol dari entitas adalah persegi panjang.
+            Selain itu, ada juga "Entitas Lemah" yang dilambangkan dengan gambar
+            persegi panjang kecil di dalam persegi panjang yang lebih besar.
+            Disebut entitas lemah karena harus berhubungan langsung dengan
+            entitas lain karena tidak dapat teridentifikasi secara unik.
+          </p>
+          <div class="container">
+            <img
+              src="./src/img/gambar1.png"
+              alt=""
+              class="img-fluid mx-auto d-block"
+            />
+          </div>
+          <li>
+            <h6 class="fw-bold">Atribut</h6>
+          </li>
+          <p>
+            Komponen kedua dari ERD adalah atribut. Setiap entitas pasti
+            memiliki elemen yang disebut atribut yang berfungsi untuk
+            mendeskripsikan karakteristik dari entitas tersebut. Atribut kunci
+            merupakan hal pembeda atribut dengan entitas. Gambar atribut
+            diwakili oleh simbol elips dan terbagi menjadi beberapa jenis:
+          </p>
+          <ul>
+            <li>
+              Atribut kunci (key): atribut yang digunakan untuk menentukan
+              entitas secara unik. Contoh: NPWP, NIM (Nomor Induk Mahasiswa).
+            </li>
+            <li>
+              Atribut simpel: atribut bernilai tunggal yang tidak dapat dipecah
+              lagi (atomic). Contoh: Alamat, tahun terbit buku, nama penerbit.
+            </li>
+            <li>
+              Atribut multinilai (multivalue): atribut yang memiliki sekelompok
+              nilai untuk setiap entitas instan. Contoh: nama beberapa pengarang
+              dari sebuah buku pelajaran.
+            </li>
+            <li>
+              Atribut gabungan (composite): atribut yang terdiri dari beberapa
+              atribut yang lebih kecil dengan arti tertentu. Contoh: nama
+              lengkap yang terbagi menjadi nama depan, tengah, dan belakang.
+            </li>
+            <li>
+              Atribut derivatif: atribut yang dihasilkan dari atribut lain dan
+              tidak wajib ditulis dalam diagram ERD. Contoh: usia, kelas,
+              selisih harga.
+            </li>
+          </ul>
+          <img
+            src="./src/img/gambar2.png"
+            alt=""
+            class="img-fluid mx-auto d-block"
+          />
+          <li>
+            <h6 class="fw-bold">Relasi</h6>
+          </li>
+          <p>
+            Hubungan antara sejumlah entitas yang berasal dari himpunan entitas
+            yang berbeda. Gambar relasi diwakili oleh simbol belah ketupat.
+            Relasi juga terbagi menjadi beberapa jenis:
+          </p>
+          <ul>
+            <li>
+              one to one :satu catatan suatu entitas berhubungan dengan catatan
+              lain dari suatu entitas
+            </li>
+            <li>
+              one to many : satu rekaman suatu entitas dengan satu atau lebih
+              rekaman entitas lain
+            </li>
+            <li>
+              many to many : banyak catatan dari satu entitas dapat dikaikat
+              dengan banyak dari entitas lain
+            </li>
+          </ul>
+        </ol>
+      </main>
+    </div>
+    <!-- Link YouTube Tutorial -->
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe
+        class="embed-responsive-item mx-auto d-block"
+        src="https://www.youtube.com/embed/Ny2p5MU0Wj0"
+      ></iframe>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+      <hr />
+      <a class="logoubp" href="https://ubpkarawang.ac.id/" target="_blank">
+        <img
+          src="./src/icon/logo_ubp-removebg-preview.png"
+          alt="UBP Logo"
+          width="60"
+          height="60"
+        />
+        Universitas Buana Perjuangan Karawang
+      </a>
+      <p>Disusun untuk memenuhi tugas basis data:</p>
+      <a href="https://business.google.com/website/adirpid" target="_blank"
+        >Bpk. Adi Pratama, Mkom</a
+      >
+      <!-- Pagination -->
+      <nav aria-label="...">
+        <ul class="pagination pagination-md">
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="./index.html">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="./tugas2.html">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="./tugas3.html">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="./tugas4.html">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="./tugas5.html">5</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!--cdn-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
